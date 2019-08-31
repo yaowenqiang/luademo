@@ -63,3 +63,22 @@ print(str1)
 print(str2)
 print(str3)
 print(str4)
+
+
+
+local corp = {
+    web = "www.google.com",
+    teleplhone = "12345677",
+    staff = {"jack","scott", "Gary"},
+    100876,
+    100191,
+    [10] = 360,
+    ["city"] = "Beijing"
+}
+
+print(corp.web);
+print(corp["teleplhone"]);
+print(corp[2]);
+print(corp['city']);
+print(corp.staff[1]);
+print(corp[10]);
