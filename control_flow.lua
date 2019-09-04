@@ -37,3 +37,58 @@ for i ,v in ipairs(t) do
 	end
 end
 
+x = 100
+
+repeat
+    print(x)
+    x = x -1
+until x < 50
+-- untill condition is false the repeat will stop
+
+
+for i=1,10 do
+    print(i)
+end
+
+for i=1,10, 5 do
+    print(i)
+end
+
+
+--for i=1,math.huge do
+--    print(i)
+--end
+
+
+local a = {"a","b","c","d","e"}
+print("type(a): ", type(a))
+for i, v in ipairs(a) do
+    print("index:", i, " value:", v)
+end
+
+
+local b = {a="a","b","c","d","e"}
+for k in pairs(b) do
+    print("key:", k)
+end
+
+
+local days = {
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "thursday",
+    "friday",
+    "Saturday"
+}
+
+local revDays = {}
+
+for k, v in pairs(days) do
+    revDays[v] = k
+end
+
+for k, v in pairs(revDays) do
+    print("k:", k ," v:", v)
+end
