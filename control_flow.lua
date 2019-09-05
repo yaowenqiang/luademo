@@ -92,3 +92,31 @@ end
 for k, v in pairs(revDays) do
     print("k:", k ," v:", v)
 end
+
+sum = 0;
+i = 1;
+while true do
+    sum = sum + 1
+    if sum > 100 then
+        break;
+    end
+
+    i = i + 1
+end
+print("The result is " .. i)
+
+
+
+for i = 1, 3 do
+    if i <= 2 then
+        print(i, "yes continue")
+        goto continue
+    end
+
+    print(i, "no continue")
+
+    ::continue::
+
+
+    print[[i'am end]]
+end
