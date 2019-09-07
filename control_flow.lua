@@ -120,3 +120,20 @@ for i = 1, 3 do
 
     print[[i'am end]]
 end
+
+local function process(input)
+    print("The input is ", input)
+    if input < 2 then
+        goto failed     
+    end
+    print("processing")
+
+    do return end
+    ::failed::
+    print("handle error with input", input)
+end
+
+
+process(1)
+process(2)
+

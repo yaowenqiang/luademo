@@ -87,3 +87,117 @@ if nil then
 else
     print("nil is false")
 end
+
+
+local function max(a, b)
+    local temp = nil;
+    if (a > b) then
+        temp = a
+    else
+        temp = b
+    end
+    return temp
+end
+
+local m = max(-12,20)
+print(m)
+
+
+local function swap(a, b)
+    local temp = a;
+    a = b;
+    b = temp;
+    print(a, b)
+end
+
+local x = "hello"
+local y = 20
+print(x, y)
+swap(x,y)
+print(x,y)
+
+
+
+local function fun1(a, b)
+    print(a,b)
+end
+
+local function fun2(a,b,c,d)
+    print(a,b,c,d)
+end
+
+local x = 1;
+local y = 2;
+local z = 3;
+
+fun1(x,y,z)
+fun2(x,y,z)
+
+
+local function fun3(...)
+    local temp = {...}
+    local ans = table.concat(temp, " ")
+    print(ans)
+end
+
+fun3(1,2)
+fun3(1,2,3,4)
+
+
+local function change(arg)
+   arg.width = arg.width * 2
+   arg.height = arg.height * 2
+   return arg
+end
+
+local rectangle = {width = 10, height = 100}
+print("before change:","width = ",  rectangle.width,
+                        "height = ", rectangle.height 
+    )
+rectangle = change(rectangle)
+
+print("after  change:","width = ",  rectangle.width,
+                        "height = ", rectangle.height 
+    )
+
+
+function change2(arg)
+    arg.width = arg.width * 2
+    arg.height = arg.height * 2
+end
+
+local rectangle2 = {width = 100, height = 200}
+print("before change:","width = ",  rectangle2.width,
+                        "height = ", rectangle2.height 
+    )
+change2(rectangle2)
+
+print("after  change:","width = ",  rectangle2.width,
+                        "height = ", rectangle2.height 
+    )
+
+local s, e = string.find("hello world", "llo")
+print(s,e)
+
+local function swap3(a,b)
+    return b,a
+end
+
+local x = 1
+local y = 2
+x ,y = swap3(x,y)
+print(x,y)
+
+function init()
+    return 1, "lua"
+end
+
+x = init()
+print(x)
+
+x ,y ,z = init()
+print(x,y,z)
+
+
+local x y, z = init(), 2
+print(x,y,z)
