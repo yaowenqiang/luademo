@@ -201,3 +201,48 @@ print(x,y,z)
 
 local x y, z = init(), 2
 print(x,y,z)
+
+
+local function init()
+    return 1, "lua"
+end
+
+print(init(), 2)
+print((init()), 2)
+print(2, init())
+print(2, (init()))
+
+local args = {} or {}
+--method_name(unpack(args, 1 ,table.maxn(args)))
+
+local function add_task(end_time, callback, params)
+end
+
+    
+
+--if os.time() >= endTime then
+    --callback(unpack(params, 1, table.maxn(params)))
+--end
+
+
+local function run(x, y)
+    print("run", x,y)
+end
+
+
+local function attach(targetId)
+    print("targetId", targetId)
+end
+
+local function do_action(method, ...)
+    local args = {...} or {}
+    method(unpack(args, 1, table.maxn(args)))
+end
+
+do_action(run, 1,2)
+do_action(attach, 1111)
+
+
+
+local t = {nil, 3, a = "b","c"}
+print(unpack(t))
