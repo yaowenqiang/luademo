@@ -50,3 +50,32 @@ print(find("abc cba", "ba", -3))
 print(find("abc cba", "(%a+)", 1))
 print(find("abc cba", "(%a+)", 1, true))
 
+print(string.format("%.4f", 3.141592653))
+print(string.format("%d %x %o", 31,31,31))
+
+d = 29; m = 7; y = 2015
+
+print(string.format("%s %02d/%02d/%d", "today is : ", d, m ,y))
+
+print(string.match("hello lua", "lua"))
+print(string.match("lua lua", "lua", 2))
+print(string.match("today is 27/7/2015", "%d+/%d+/%d+"))
+
+
+s = "hello world from lua"
+
+for w in string.gmatch(s, "%a+") do
+    print(w)
+end
+
+t = {}
+s = "from=world, to=Lua"
+for k, v in string.gmatch(s, "(%a+)=(%a+)") do
+    t[k] = v
+end
+
+for k, v in pairs(t) do
+    print(k, v)
+end
+
+
