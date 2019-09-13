@@ -65,7 +65,7 @@ print(string.match("today is 27/7/2015", "%d+/%d+/%d+"))
 s = "hello world from lua"
 
 for w in string.gmatch(s, "%a+") do
-    print(w)
+    print("gmatch: " .. w)
 end
 
 t = {}
@@ -78,4 +78,14 @@ for k, v in pairs(t) do
     print(k, v)
 end
 
+print(string.rep("ABC", 3))
 
+print("string.sub('hello lua', 4,7) : " .. string.sub("hello lua", 4,7))
+print("string.sub('hello lua', 2) : " .. string.sub("hello lua", 2))
+print("string.sub('hello lua', 2, 1) : " .. string.sub("hello lua", 2, 1))
+print("string.sub('hello lua', -3, -1)) : " .. string.sub("hello lua", -3, -1))
+
+print("string", string.gsub("Lua Lua Lua", "Lua", "hello"))
+print("string", string.gsub("Lua Lua Lua", "Lua", "hello", 2))
+
+print(string.reverse("hello lua"))
