@@ -1,0 +1,15 @@
+#!/bin/bash 
+lua_files=$(git status -s | awk '{ if(($1=="M"||$1="A") && $2 ~ /.lua$/)print$2; }')
+if [[ "$lua_files" != "" ]]; then
+    result=$(luacheck $lua_files)
+    if [[ "$result" =~ .*:.*:.*: ]]; then
+        echo "$result"
+        echo ""
+        exec < /dev/tty
+        read -p "Aobrt commit?(Y/n)"
+        if [[ "$REPLAY" == y* ]] || [[ "$REPLAY" == Y* ]]; then
+            echo "Abort commit"
+            exit 1
+        fi
+    fi
+fi
