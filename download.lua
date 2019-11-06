@@ -1,4 +1,4 @@
-require "luasocket"
+require "socket"
 host = "www.w3.org"
 file = "/TR/REC-html32.html"
 
@@ -20,7 +20,7 @@ function download(host, file)
         if status == "closed" then break end
     end
 
-    c.close()
+    c:close(c)
 
     printf(file, count)
 
