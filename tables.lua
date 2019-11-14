@@ -1,5 +1,22 @@
 --luarocks install penlight
 require "pl"
+
+--tab = {sin(0), sin(1), sin(2), sin(3)}
+
+list = nil
+i = 1;
+for line in io.lines() do
+  i = i + 1
+  list = {next=list, value=line}
+  if i > 10 then
+    break
+  end
+
+end
+
+pretty.dump(list)
+
+pretty.dump(tab)
 local color = {first="red", "blue", third="green", "yellow"}
 
 print(color["first"])
