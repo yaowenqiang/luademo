@@ -1,3 +1,4 @@
+require "pl"
 a = 1
 b = 2
 print(a and b)  -- if a == false return a else return b
@@ -33,3 +34,21 @@ print([[not null ]]  .. tostring(not nil))
 print([[not false ]]  .. tostring(not false))
 print([[not 0 ]]  .. tostring(not 0))
 print([[not not null ]]  .. tostring(not not nil))
+
+
+opnames = {
+  ["+"] = "add",
+  ["-"] = "sub",
+  ["*"] = "mul",
+  ["/"] = "div",
+}
+
+i = 20;
+s = "-"
+
+a = {[i + 0] = s, [i + 1] = s..s, [i + 2] = s ..s..s}
+
+print(opnames[s])
+print(a[22])
+
+pretty.dump(opnames)
