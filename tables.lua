@@ -109,3 +109,17 @@ pretty.dump(a)
 
 table.sort(a, compare)
 pretty.dump(a)
+
+
+
+days = {
+    [0]="Sunday",
+    "Monday",
+    "Tuesday",
+    "wendnesday",
+    "thrusday",
+    "Friday",
+    "Saturday"
+}
+
+pretty.dump(days)
