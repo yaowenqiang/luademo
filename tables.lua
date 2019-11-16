@@ -123,3 +123,13 @@ days = {
 }
 
 pretty.dump(days)
+
+
+a = {
+    x=5,
+    y=10;---使用分号分隔不同类型元素
+    "ONE",
+    "TWO",
+    "THREE",
+
+}
