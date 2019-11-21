@@ -20,6 +20,7 @@ local days = {
   "Thursday",
   "Friday",
   "Saturday",
+
 }
 
 local newDays = {};
@@ -29,5 +30,21 @@ end
 
 for i, v in pairs(newDays) do
     print(newDays[i])
+end
+
+
+for i=1, 10, 1 do
+    if i == 5 then print(i) break end
+end
+
+
+function foo()
+  --return
+
+  --print("i am not done yet!")
+  do 
+    return 
+  end
+
 end
 
