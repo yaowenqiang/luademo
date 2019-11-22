@@ -246,3 +246,27 @@ do_action(attach, 1111)
 
 local t = {nil, 3, a = "b","c"}
 print(unpack(t))
+
+
+print "hello world"
+
+print [[
+  a multi-line
+  message
+]]
+
+function f(arg) 
+  print(arg.x)
+end
+
+
+f{x=10, y = 20}
+f({x=10, y = 20})
+print(type{})
+print(type({}))
+
+function ff(a,b) return a or b end
+
+print(ff(3))
+print(ff(3, 4))
+print(ff(3,4, 5))
