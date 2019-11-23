@@ -255,6 +255,9 @@ print [[
   message
 ]]
 
+
+
+
 function f(arg) 
   print(arg.x)
 end
@@ -270,3 +273,22 @@ function ff(a,b) return a or b end
 print(ff(3))
 print(ff(3, 4))
 print(ff(3,4, 5))
+
+
+
+function maxinum(a)
+  local mi = 1
+  local m = a[mi]
+  for i, val in ipairs(a) do
+    if val > m then
+      mi = i
+      m = val
+    end
+  end
+  return m, mi
+end
+
+a, b = maxinum({1,2,5, 7, 9, 3,4})
+
+print("a ", a)
+print("b ", b)
