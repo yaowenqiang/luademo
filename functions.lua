@@ -292,3 +292,23 @@ a, b = maxinum({1,2,5, 7, 9, 3,4})
 
 print("a ", a)
 print("b ", b)
+
+print(maxinum({1,2,5, 7, 9, 3,4}))
+
+
+
+function foo0 () end
+function foo1() return 'a' end
+function foo2() return 'a', 'b' end
+function foo3() return 'a', 'b', 'c' end
+
+
+print(foo())
+print(foo1())
+print(foo2())
+print(foo2(), 1)
+print(foo2() .. "x")
+print(foo3() .. "x")
+print(foo3() , 4, 5)
+
+print(tostring(foo2()))
