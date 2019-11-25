@@ -312,3 +312,14 @@ print(foo3() .. "x")
 print(foo3() , 4, 5)
 
 print(tostring(foo2()))
+
+
+
+aa = {foo0()}
+print(aa)
+
+ab = {foo0()} -- {}
+ac = {foo1()} -- {'a'}
+ac = {foo2()} -- {'a', 'b'}
+ad = {foo0(), foo1(), foo2(), 4} -- {nil, "a", "b", 4}
+
