@@ -323,3 +323,17 @@ ac = {foo1()} -- {'a'}
 ac = {foo2()} -- {'a', 'b'}
 ad = {foo0(), foo1(), foo2(), 4} -- {nil, "a", "b", 4}
 
+
+function foo(i) 
+    if i == 1 then return foo1() 
+      elseif 2 == i then return foo2() 
+      elseif 3 == i then return foo3() 
+    end
+end
+print(foo(1)) --a
+print(foo(2)) --a b
+print(foo(3)) -- a b c 
+
+print((foo(1))) --a
+print((foo(2))) --a 
+print((foo(3))) -- a  
