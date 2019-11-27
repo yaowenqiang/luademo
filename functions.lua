@@ -337,3 +337,21 @@ print(foo(3)) -- a b c
 print((foo(1))) --a
 print((foo(2))) --a 
 print((foo(3))) -- a  
+
+
+f = string.find
+a = {"hello", "ll"}
+
+print(f(unpack(a)))
+
+
+
+function my_unpack(t ,i) 
+    i = i or 1
+    if t[i] then
+      return t[i] , unpack(t ,i+1)
+    end
+end
+
+
+print(f(my_unpack(a)))
