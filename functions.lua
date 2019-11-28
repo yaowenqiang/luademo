@@ -355,3 +355,18 @@ end
 
 
 print(f(my_unpack(a)))
+
+
+
+printResult = ""
+function my_print(...)
+    for i, v in ipairs(arg) do
+      printResult = printResult .. tostring(v) .. "\t"
+    end
+
+    printResult = printResult .. "\n"
+end
+my_print('a', 'b', 'c', 'd',' e')
+
+my_unpack('a', 'b', 'c')
+print(printResult)
