@@ -353,20 +353,36 @@ function my_unpack(t ,i)
     end
 end
 
-
+print("ddd")
 print(f(my_unpack(a)))
 
 
-
-printResult = ""
+print("eee")
 function my_print(...)
+    printResult = ""
     for i, v in ipairs(arg) do
       printResult = printResult .. tostring(v) .. "\t"
+      print(printResult)
     end
-
     printResult = printResult .. "\n"
+    return printResult
 end
-my_print('a', 'b', 'c', 'd',' e')
+print(my_print('a', 'b', 'c', 'd',' e'))
+print("eee")
 
 my_unpack('a', 'b', 'c')
 print(printResult)
+
+function g(a, b, ...)
+    print(a)
+    print(b)
+
+    for i, v in ipairs(arg) do
+      printResult = printResult .. tostring(v) .. "\t"
+    end
+end
+g(1)
+g(1,2)
+g(1,2, 3)
+g(1,2, 3, 4)
+
