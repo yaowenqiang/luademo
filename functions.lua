@@ -386,3 +386,18 @@ g(1,2)
 g(1,2, 3)
 g(1,2, 3, 4)
 
+
+local start_index , end_index = string.find("abc", "d")
+print(start_index)
+print(end_index)
+
+local start_index , end_index = string.find("abca", "a")
+print(start_index) --1
+print(end_index)   --1
+
+local __ , end_index = string.find("hello world", "hello")
+print("dummy value : " .. __) --1
+print(end_index)   --5 where the match ends
+s = "hello world"
+i, j = string.find(s, "hello")
+print(string.sub(s ,i, j)) -- hello ,print matched string
