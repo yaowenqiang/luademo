@@ -401,3 +401,16 @@ print(end_index)   --5 where the match ends
 s = "hello world"
 i, j = string.find(s, "hello")
 print(string.sub(s ,i, j)) -- hello ,print matched string
+
+
+function select (n, ...)
+    print(args[n])
+    return args[n]
+  end
+
+
+print(string.find("hello hello", " hel"))
+
+print(select(1, string.find("hello hello", " hel")))
+print(select(2, string.find("hello hello", " hel")))
+
