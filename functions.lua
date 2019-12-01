@@ -234,18 +234,18 @@ local function attach(targetId)
     print("targetId", targetId)
 end
 
-local function do_action(method, ...)
-    local args = {...} or {}
-    method(unpack(args, 1, table.maxn(args)))
-end
+-- local function do_action(method, ...)
+    -- local args = {...} or {}
+    -- method(unpack(args, 1, table.maxn(args)))
+-- end
 
-do_action(run, 1,2)
-do_action(attach, 1111)
+-- do_action(run, 1,2)
+-- do_action(attach, 1111)
 
 
 
 local t = {nil, 3, a = "b","c"}
-print(unpack(t))
+-- print(unpack(t))
 
 
 print "hello world"
@@ -342,19 +342,19 @@ print((foo(3))) -- a
 f = string.find
 a = {"hello", "ll"}
 
-print(f(unpack(a)))
+-- print(f(unpack(a)))
 
 
 
-function my_unpack(t ,i) 
-    i = i or 1
-    if t[i] then
-      return t[i] , unpack(t ,i+1)
-    end
-end
+-- function my_unpack(t ,i) 
+--     i = i or 1
+--     if t[i] then
+--       return t[i] , unpack(t ,i+1)
+--     end
+-- end
 
 print("ddd")
-print(f(my_unpack(a)))
+-- print(f(my_unpack(a)))
 
 
 print("eee")
@@ -370,7 +370,7 @@ end
 print(my_print('a', 'b', 'c', 'd',' e'))
 print("eee")
 
-my_unpack('a', 'b', 'c')
+-- my_unpack('a', 'b', 'c')
 print(printResult)
 
 function g(a, b, ...)
