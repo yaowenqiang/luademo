@@ -404,6 +404,7 @@ print(string.sub(s ,i, j)) -- hello ,print matched string
 
 
 function select (n, ...)
+    arg = {...}
     print(args[n])
     return args[n]
   end
