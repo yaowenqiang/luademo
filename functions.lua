@@ -414,3 +414,10 @@ print(string.find("hello hello", " hel"))
 print(select(1, string.find("hello hello", " hel")))
 print(select(2, string.find("hello hello", " hel")))
 
+--rename(oldname='a', newname='b') won't work
+
+function rename(arg)
+    return os.rename(arg.old, arg.new)
+end
+
+rename{old="a", new="b"}
