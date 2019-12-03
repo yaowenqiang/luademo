@@ -422,3 +422,21 @@ function rename(arg)
 end
 
 rename{old="a", new="b"}
+
+
+
+a = {p = print}
+
+a.p("hello world")
+
+print = math.sin
+a.p(print(1))
+
+sin = a.p
+sin(10, 20)
+
+
+function foo (x) return 2 * x end
+a.p(foo(2))
+foo = function(x) return 2 * x end
+a.p(foo(3))
