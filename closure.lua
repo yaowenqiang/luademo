@@ -36,3 +36,24 @@ print(c1())
 print(c1())
 print(c1())
 print(c1())
+
+lib = {}
+
+lib.foo = function (x, y) return x + y end
+lib.goo = function (x, y) return x - y end
+
+
+lib2 = {
+    foo = function (x, y) return x + y end,
+    goo = function (x, y) return x + y end,
+
+}
+lib3 = {}
+
+function lib3.foo (x, y)
+  return x + y
+end
+
+function lib3.goo (x, y)
+  return x - y
+end
