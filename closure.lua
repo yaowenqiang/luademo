@@ -57,3 +57,41 @@ end
 function lib3.goo (x, y)
   return x - y
 end
+
+local f = function () 
+  
+end
+
+
+
+local g = function () 
+
+end
+
+
+
+local function f () 
+
+end
+
+
+local  function  g ()
+
+end
+
+
+
+
+local fact
+
+fact = function (n)
+    if n == 0 then
+      return 1
+    else 
+
+      return n * fact(n - 1)
+    end
+
+end
+
+print(fact(4))
