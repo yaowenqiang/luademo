@@ -95,3 +95,23 @@ fact = function (n)
 end
 
 print(fact(4))
+
+
+function g(x) 
+    return x*x
+end
+
+function ff(x)
+    return g(x)
+end
+
+
+print(ff(200))
+
+
+
+function foo (n)
+    if n > 0 then return foo(n-1) end
+end
+
+print(foo(10))
