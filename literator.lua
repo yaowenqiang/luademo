@@ -19,3 +19,10 @@ while true do
 end
 
 
+t = {10, 20, 30}
+
+for element in list_iter(t) do
+    print(element)
+end
+
+
