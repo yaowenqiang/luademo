@@ -51,8 +51,62 @@ end
 --end
 
 
-a = {"one", "tow", "three"}
+a = {"one", "two", "three"}
 
 for i, v in ipairs(a) do
   print(i, v) 
+end
+
+function iter (a, i)
+  print("iter")
+  i = i + 1
+  local v = a[i]
+  if v then
+    return i , v
+  end
+end
+
+function ipairs2(a)
+  return iter, a , 0
+end
+
+
+for i, v in ipairs2(a)  do
+  print(i, v)
+end
+
+
+
+
+for i, v in next , a do
+  print(i, v)
+end
+
+
+
+local iterator
+
+function allwords2()
+  local state = {line = io.read(), pos = 1}
+  return iterator, state
+end
+
+function iterator(state)
+    while state.line do
+        local s, e = string.find(state.line, "%w+", state.pos)
+        if s then
+            print("find " ..  s)
+            state.pos = e + 1
+            return string.sub(state.line, s, e)
+        else
+            state.line = io.read()
+            state.pos = 1
+        end
+    end
+
+    return nil
+
+end
+for word in allwords2() do
+  print(word)
 end
