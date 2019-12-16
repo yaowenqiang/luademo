@@ -107,6 +107,29 @@ function iterator(state)
     return nil
 
 end
-for word in allwords2() do
-  print(word)
+--for word in allwords2() do
+ -- print(word)
+--end
+
+
+function allwords3(f)
+    for l in io.lines() do
+      print( "---" .. l .. "---")
+        if l == ""  then return end
+        for w in string.gfind(l, "%w+") do
+            f(w)
+        end
+        
+    end
 end
+
+--allwords3(print)
+
+local count = 0
+allwords3(function(w) 
+    if w == "hello" then
+        count = count + 1
+    end
+end)
+
+print(count)
