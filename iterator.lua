@@ -133,3 +133,11 @@ allwords3(function(w)
 end)
 
 print(count)
+
+
+
+
+function dofile (filename)
+    local f = assert(loadfile(filename))
+    return f()
+end
