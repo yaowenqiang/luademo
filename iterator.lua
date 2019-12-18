@@ -121,6 +121,7 @@ function allwords3(f)
         end
         
     end
+
 end
 
 --allwords3(print)
@@ -141,3 +142,16 @@ function dofile (filename)
     local f = assert(loadfile(filename))
     return f()
 end
+
+f = loadstring("i = i + 1")
+i = 1;
+f()
+print(i)
+f()
+print(i)
+
+print(loadstring("i i"))
+
+ff = loadfile("foo1.lua")
+ff()
+foo(1)
