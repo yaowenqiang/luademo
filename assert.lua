@@ -27,3 +27,18 @@ until file
 
 
 file = assert(io.open(io.read(), "r"))
+
+function pcall_foo()
+  assert(1 > 5)
+    --io.open("ffff")
+end
+
+if pcall(pcall_foo) then
+   print("success") 
+   else
+     print("fall")
+end
+
+
+if (pcall(function() print("pcall") end)) then end
+
