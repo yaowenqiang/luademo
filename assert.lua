@@ -42,3 +42,19 @@ end
 
 if (pcall(function() print("pcall") end)) then end
 
+
+local status, err = pcall(function () a = "a" + 1 end)
+print(err)
+
+local status, err = pcall(function () error("something badly happened!") end)
+print(err)
+
+function error_foo (str)
+    if type(str) ~= "string" then
+       error("string expected", 2) 
+    end
+end
+
+error_foo(1)
+print(debug.traceback())
+
