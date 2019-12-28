@@ -54,3 +54,27 @@ end)
 print(coroutine.resume(co4,20, 10))
 print(coroutine.resume(co4,20, 10))
 print(coroutine.resume(co4,20, 10))
+
+
+
+x = 1
+y = 2
+co5 = coroutine.create(function() 
+  for i=1, 10 do
+    --jx = x + 1
+    --jy = y + 1
+    --print(i)
+    coroutine.yield()
+  end
+  --return x, y
+
+    return 1
+end)
+
+print("aaa")
+print(coroutine.resume(co5))
+print("aaa")
+print(coroutine.resume(co5))
+print(coroutine.resume(co5))
+print(coroutine.resume(co5))
+print(coroutine.resume(co5))
